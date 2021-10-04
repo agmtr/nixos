@@ -1,5 +1,7 @@
 export ROOT_DISK=/dev/sda
 
+wipefs -a "{ROOT_DISK}"
+
 parted -a opt --script "${ROOT_DISK}" \
 mklabel gpt \
 mkpart primary fat32 0% 512MiB \
