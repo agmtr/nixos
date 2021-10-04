@@ -16,7 +16,7 @@ cryptsetup open /dev/sda2 enc
 mkfs.fat -F32 -n boot /dev/sda1
 mkfs.btrfs /dev/mapper/enc
 
-mount -t btrfs /dev/mapper/enc
+mount -t btrfs /dev/mapper/enc /mnt
 
 btrfs subvolume create /mnt/@nixos
 btrfs subvolume create /mnt/@home
