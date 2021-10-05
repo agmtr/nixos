@@ -35,5 +35,5 @@ mount /dev/sda1 /mnt/boot
 touch /mnt/swap/swapfile
 chmod 600 /mnt/swap/swapfile
 chattr +C /mnt/swap/swapfile
-fallocate /swap/swapfile -l 8G
+fallocate /mnt/swap/swapfile -l 8G
 
